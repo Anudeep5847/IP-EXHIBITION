@@ -66,7 +66,7 @@ export default function Home() {
               © 2025 MONTFORT IP EXHIBITION. Celebrating Student Innovation.
             </p>
             <p className="text-xs text-muted-foreground">
-              Built with ❤️ by students, for students
+              Built with ❤️ by Anudeep, A386
             </p>
           </div>
         </div>
