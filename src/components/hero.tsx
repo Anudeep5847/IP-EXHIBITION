@@ -52,7 +52,7 @@ export function Hero({ projectCount }: HeroProps) {
           >
             MONTFORT IP
             <span
-              className={`block mt-3 bg-clip-text text-transparent ${
+              className={`block bg-clip-text text-transparent ${
                 isDark
                   ? 'bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500'
                   : 'bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700'
