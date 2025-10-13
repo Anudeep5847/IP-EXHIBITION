@@ -43,7 +43,7 @@ export function Hero({ projectCount }: HeroProps) {
       />
 
       {/* Main Content */}
-      <div className="relative z-30 container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="relative z-30 container mx-auto px-4 sm:px-6 lg:px-8 pb-20 mt-[120px]">
         <div className="mx-auto max-w-4xl text-center space-y-6 mb-10">
           <h1
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight transition-all duration-300 ${
