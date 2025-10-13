@@ -1,6 +1,6 @@
 import { Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import sliderImage from "@/assets/slider1.jpg";
+import sliderImage from "@/assets/slider1";
 
 interface HeroProps {
   projectCount: number;
