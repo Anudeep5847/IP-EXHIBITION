@@ -15,7 +15,6 @@ const ThemeProviderContext = createContext<ThemeProviderState | undefined>(undef
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Check if window is defined (not SSR)
     if (typeof window !== "undefined") {
       const stored = window.localStorage.getItem("theme");
       return (stored as Theme) || "light";
@@ -25,6 +24,12 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   useEffect(() => {
     const root = document.documentElement;
+    
+    // Remove no-transition class after initial load
+    setTimeout(() => {
+      document.body.classList.remove('no-transition');
+    }, 100);
+
     root.classList.remove("light", "dark");
     root.classList.add(theme);
     window.localStorage.setItem("theme", theme);
