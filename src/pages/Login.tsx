@@ -23,7 +23,7 @@ export default function Login() {
     await new Promise((resolve) => setTimeout(resolve, 800));
 
     // Simple hardcoded authentication (you can replace this with actual API)
-    if (username === "admin" && password === "admin123") {
+    if (username === "anudeep" && password === "Anudeep3") {
       // Store auth token
       localStorage.setItem("isAdminAuthenticated", "true");
       localStorage.setItem("adminUsername", username);
@@ -106,7 +106,7 @@ export default function Login() {
 
               <div className="mt-4 p-3 bg-muted rounded-lg">
                 <p className="text-xs text-muted-foreground text-center">
-                  <strong>Demo Credentials:</strong><br />
+                  <strong>Example:</strong><br />
                   Username: admin<br />
                   Password: admin123
                 </p>
@@ -117,4 +117,5 @@ export default function Login() {
       </main>
     </div>
   );
+
 }
