@@ -20,7 +20,7 @@ export function Header() {
                 <h1 className="text-lg font-bold leading-tight text-foreground group-hover:text-primary transition-colors">
                   MONTFORT IP
                 </h1>
-                <p className="text-xs text-muted-foreground leading-tight mt-1">
+                <p className="text-xs text-muted-foreground leading-tight mt-3">
                   Exhibition 2025
                 </p>
               </div>
