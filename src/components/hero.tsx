@@ -27,7 +27,7 @@ export function Hero({ projectCount }: HeroProps) {
         className={`absolute inset-0 transition-all duration-500 z-10 ${
           isDark 
             ? 'bg-gradient-to-b from-black/70 via-black/50 to-black/70' 
-            : 'bg-gradient-to-b from-white/30 via-white/15 to-white/30'
+            : 'bg-gradient-to-b from-transparent via-white/5 to-transparent'
         }`}
       />
       
