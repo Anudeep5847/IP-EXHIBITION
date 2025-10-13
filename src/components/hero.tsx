@@ -83,7 +83,7 @@ export function Hero({ projectCount }: HeroProps) {
               variant="outline"
               className={`backdrop-blur-md shadow-lg transition-all duration-300 ${
                 isDark
-                  ? "border-white/30 bg-white/10 text-white hover:bg-white/20"
+                  ? "border-white/20 bg-white/10 text-white hover:bg-white/20"
                   : "border-black/20 bg-white/60 text-gray-900 hover:bg-white/80"
               }`}
             >
