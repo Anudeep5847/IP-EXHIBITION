@@ -107,8 +107,8 @@ export default function Login() {
               <div className="mt-4 p-3 bg-muted rounded-lg">
                 <p className="text-xs text-muted-foreground text-center">
                   <strong>Example:</strong><br />
-                  Username: admin<br />
-                  Password: admin123
+                  Username: user<br />
+                  Password: user123
                 </p>
               </div>
             </form>
@@ -119,3 +119,4 @@ export default function Login() {
   );
 
 }
+
