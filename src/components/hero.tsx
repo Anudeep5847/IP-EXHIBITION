@@ -1,6 +1,5 @@
 import { Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import sliderImage from "@/assets/slider1";
 
 interface HeroProps {
   projectCount: number;
@@ -9,15 +8,15 @@ interface HeroProps {
 export function Hero({ projectCount }: HeroProps) {
   return (
     <section className="relative overflow-hidden border-b min-h-[500px] flex items-center">
-      {/* Background Image */}
+      {/* Background Image - Public Folder */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: `url(${sliderImage})`,
+          backgroundImage: `url('/slider1.jpg')`,
         }}
       />
       
-      {/* Gradient Overlay - Dark at edges, lighter in center */}
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80" />
       
       {/* Content */}
