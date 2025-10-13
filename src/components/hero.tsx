@@ -9,31 +9,32 @@ interface HeroProps {
 export function Hero({ projectCount }: HeroProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
-
+  
   return (
     <section className="relative overflow-hidden border-b min-h-[500px] flex items-center transition-all duration-500">
       {/* Background Image with theme-aware brightness */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-500"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-500 z-0"
         style={{ 
           backgroundImage: `url('/slider1.jpg')`,
-          filter: isDark ? 'brightness(0.7) contrast(1.1)' : 'brightness(1.1) contrast(0.95)',
+          filter: isDark ? 'brightness(0.7) contrast(1.1)' : 'none',
+          opacity: isDark ? 1 : 1,
         }}
       />
       
       {/* Theme-aware Gradient Overlay */}
       <div 
-        className={`absolute inset-0 transition-all duration-500 ${
+        className={`absolute inset-0 transition-all duration-500 z-10 ${
           isDark 
             ? 'bg-gradient-to-b from-black/70 via-black/50 to-black/70' 
-            : 'bg-gradient-to-b from-white/40 via-white/20 to-white/40'
+            : 'bg-gradient-to-b from-white/30 via-white/15 to-white/30'
         }`}
       />
       
       {/* Optional: Dot Pattern (more subtle in light mode) */}
       <div 
-        className={`absolute inset-0 transition-opacity duration-500 ${
-          isDark ? 'opacity-20' : 'opacity-10'
+        className={`absolute inset-0 transition-opacity duration-500 z-20 ${
+          isDark ? 'opacity-20' : 'opacity-5'
         }`}
         style={{ 
           backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
@@ -43,7 +44,7 @@ export function Hero({ projectCount }: HeroProps) {
       />
       
       {/* Content with theme-aware colors */}
-      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 z-10">
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 z-30">
         <div className="mx-auto max-w-4xl text-center space-y-6">
           <Badge 
             variant="outline" 
@@ -56,7 +57,6 @@ export function Hero({ projectCount }: HeroProps) {
             <Sparkles className="mr-1.5 h-3.5 w-3.5" />
             {projectCount} Featured Projects
           </Badge>
-
           <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight transition-all duration-300 ${
             isDark ? 'text-white drop-shadow-2xl' : 'text-gray-900 drop-shadow-lg'
           }`}>
@@ -69,7 +69,6 @@ export function Hero({ projectCount }: HeroProps) {
               EXHIBITION 2025
             </span>
           </h1>
-
           <p className={`mx-auto max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed transition-all duration-300 ${
             isDark 
               ? 'text-gray-100 drop-shadow-lg' 
