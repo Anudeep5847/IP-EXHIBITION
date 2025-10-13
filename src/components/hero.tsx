@@ -11,7 +11,7 @@ export function Hero({ projectCount }: HeroProps) {
   const isDark = theme === "dark";
   
   return (
-    <section className="relative overflow-hidden border-b min-h-[500px] flex items-end justify-center transition-all duration-500">
+    <section className="relative overflow-hidden border-b min-h-[500px] flex flex-col justify-end transition-all duration-500">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-500 z-0"
@@ -42,9 +42,9 @@ export function Hero({ projectCount }: HeroProps) {
         }} 
       />
 
-      {/* Content */}
-      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-20 z-30">
-        <div className="mx-auto max-w-4xl text-center space-y-6">
+      {/* Main Content */}
+      <div className="relative z-30 container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="mx-auto max-w-4xl text-center space-y-6 mb-10">
           <h1
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight transition-all duration-300 ${
               isDark ? 'text-white drop-shadow-2xl' : 'text-gray-900 drop-shadow-lg'
@@ -62,18 +62,6 @@ export function Hero({ projectCount }: HeroProps) {
             </span>
           </h1>
 
-          <Badge 
-            variant="outline" 
-            className={`mt-4 backdrop-blur-md shadow-lg transition-all duration-300 ${
-              isDark
-                ? 'border-white/30 bg-white/10 text-white hover:bg-white/20'
-                : 'border-black/20 bg-white/60 text-gray-900 hover:bg-white/80'
-            }`}
-          >
-            <Sparkles className="mr-1.5 h-3.5 w-3.5" />
-            {projectCount} Featured Projects
-          </Badge>
-
           <p
             className={`mx-auto max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed transition-all duration-300 ${
               isDark 
@@ -85,6 +73,21 @@ export function Hero({ projectCount }: HeroProps) {
             technology, and academic excellence. Explore groundbreaking ideas 
             from our talented innovators.
           </p>
+        </div>
+
+        {/* Badge at Bottom */}
+        <div className="flex justify-center pb-6">
+          <Badge 
+            variant="outline" 
+            className={`backdrop-blur-md shadow-lg transition-all duration-300 ${
+              isDark
+                ? 'border-white/30 bg-white/10 text-white hover:bg-white/20'
+                : 'border-black/20 bg-white/60 text-gray-900 hover:bg-white/80'
+            }`}
+          >
+            <Sparkles className="mr-1.5 h-3.5 w-3.5" />
+            {projectCount} Featured Projects
+          </Badge>
         </div>
       </div>
     </section>
